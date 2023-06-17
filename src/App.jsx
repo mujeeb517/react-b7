@@ -13,7 +13,7 @@
 // function or class
 // UI or null
 // modules private
-
+// custom styles
 import Header from './Header';
 import Footer from './Footer';
 import Name from './Name';
@@ -22,28 +22,26 @@ import ProductList from './ProductList';
 import Counter from './Counter';
 import UserList from './users/UserList';
 import Login from './Login';
+import Home from './Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Contact from './Contact';
+import About from './About';
+import NotFound from './NotFound';
 
 function App() {
-    return <div>
-        {/* <Header /> */}
-        <Login />
-        {/* <UserList /> */}
-        {/* <ProductList /> */}
-
-        {/* <Result name="John" marks={60} />
-        <Result name="Joseph" marks={40} /> */}
-
-
-        {/* <Name personName="John" age={20} />
-        <Name personName="Joseph" age={22} /> */}
-        {/* <h1>Hello World</h1>
-        <h2>Hello React</h2>
-        <img width="400" height="300" src="https://images.pexels.com/photos/4022107/pexels-photo-4022107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
-
-        <input type="text" placeholder='Email' />
-
-        <Footer /> */}
-    </div>
+    return <BrowserRouter>
+        <Header />
+        <Routes>
+            <Route path="/" Component={Home} />
+            <Route path="/about" Component={About} />
+            <Route path="/contact" Component={Contact} />
+            <Route path="/users" Component={UserList} />
+            <Route path="/products" Component={ProductList} />
+            {/* <Route path="*" Component={Home} /> */}
+            <Route path="*" Component={NotFound} />
+        </Routes>
+        <Footer />
+    </BrowserRouter>
 }
 
 export default App;

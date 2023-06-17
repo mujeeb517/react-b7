@@ -14,26 +14,23 @@ class UserList extends Component {
         users: [],
         loading: true,
         hasError: false
-    }
+    };
 
     constructor() {
         super();
-        setTimeout(() => {
-            axios.get('https://api.github.com/users')
-                .then((res) => {
-                    this.setState({
-                        users: res.data,
-                        loading: false
-                    });
-                })
-                .catch((err) => {
-                    this.setState({
-                        loading: false,
-                        hasError: true
-                    });
+        axios.get('https://api.github.com/users')
+            .then((res) => {
+                this.setState({
+                    users: res.data,
+                    loading: false
                 });
-        }, 2000);
-
+            })
+            .catch((err) => {
+                this.setState({
+                    loading: false,
+                    hasError: true
+                });
+            });
     }
 
     render() {
