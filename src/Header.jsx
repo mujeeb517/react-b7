@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
+
+    const logout = () => {
+        localStorage.removeItem('token');
+    };
+
     return <nav className="flex bg-orange-500 text-white p-2">
         <div className="text-2xl flex mr-6">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 m-1">
@@ -34,6 +39,8 @@ function Header() {
                 </li>
             </ul>
         </div>
+        <Link className="m-2 text-black" to="/login">Login</Link>
+        <button onClick={logout} className="m-2 text-black">Logout</button>
     </nav>
 }
 

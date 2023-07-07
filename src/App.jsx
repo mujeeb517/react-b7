@@ -36,6 +36,7 @@ function App() {
             <Route path="/about" Component={About} />
             <Route path="/contact" Component={Contact} />
             <Route path="/users" Component={UserList} />
+            <Route path="/login" Component={Login} />
             <Route path="/products" Component={ProductList} />
             {/* <Route path="*" Component={Home} /> */}
             <Route path="*" Component={NotFound} />

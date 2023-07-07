@@ -6,3 +6,13 @@ function NotFound() {
 }
 
 export default NotFound;
+
+// authentication, authorization
+// username or password
+// fingerprint
+// retina
+// faceid
+// Delete product
+// Seller , Buyer (view, comment)
+// authorization (permission, privilages)
+// Professor, HOD, MD, Students
