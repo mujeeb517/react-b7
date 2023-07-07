@@ -11,16 +11,18 @@ class Login extends React.Component {
 
     state = {
         email: '',
-        password: ''
+        password: '',
+        hasError: false
     };
 
     onLogin = () => {
         axios.post('https://fsa-api-b6.onrender.com/api/users/signin', this.state)
             .then((res) => {
                 localStorage.setItem('token', res.data.token);
+                // Redirect product 
             })
             .catch((err) => {
-                console.log(err);
+                this.setState({ hasError: true });
             });
     }
 
@@ -38,6 +40,11 @@ class Login extends React.Component {
 
     render() {
         return <div class="bg-gray-100 w-1/3 shadow-md rounded px-8 pt-2 pb-8 m-4">
+            {this.state.hasError ?
+                <div className="bg-red-400 p-2 rounded text-white">
+                    Wrong username or password
+                </div> : null
+            }
             <h1 class="m-4 text-2xl font-semibold underline">Login</h1>
             <div class="m-4">
                 <input onChange={this.onEmailChange} class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Email" />
