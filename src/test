@@ -1,0 +1,63 @@
+/* 
+NodeJS
+MongoDB
+MySql (fundamentals, Rows, columns, relationships)
+Sequelize 
+REST api
+auth, authorisation
+
+TDD (Test driven development)
+Unit test
+Integration test
+E2e test
+performance testing
+decisions (tech, tools, s/w design patterns, arch.patterns)
+
+Business requirements
+Technical requirements
+
+Tech Breadth (Java, DevOps, Docker, CI CD)
+Tech Depth (strong one programming lang)
+
+-----------
+    -
+    -
+    -
+    -
+
+product
+    mrp price
+    discount
+    final price
+    createdDate (20 days ago)
+    mrp - mrp*discount 
+    CI CD (concepts)
+
+    automate
+    Dockerfile 
+    
+    Ubuntu 
+    npm run build
+
+    EC2 16gb -> 32 gb
+    VM (Linux ) + api
+    docker container (OS UI lite + api) autoscale
+    10users/sec, 1000000 users/sec
+    EKS, Fargate
+    PR (code style, npm install, npm build)
+    merge: Dev, Stage, (1.0.2)
+    gateway: Prod (Versions 1.0.2)
+    rollback (1.0.1)
+*/
+
+// ASE/Jr.Engineer
+// SE
+// SSE
+// Lead
+// Principle
+// Architect
+// CTO
+
+// Lead
+// Principle
+// Architect

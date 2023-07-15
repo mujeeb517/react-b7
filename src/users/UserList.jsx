@@ -10,14 +10,17 @@ import Loader from '../Loader';
 import Error from '../Error';
 
 class UserList extends Component {
-    state = {
-        users: [],
-        loading: true,
-        hasError: false
-    };
 
     constructor() {
         super();
+        this.state = {
+            users: [],
+            loading: true,
+            hasError: false
+        };
+    }
+
+    componentDidMount() {
         axios.get('https://api.github.com/users')
             .then((res) => {
                 this.setState({
