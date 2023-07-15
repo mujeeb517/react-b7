@@ -2,6 +2,7 @@ import React from 'react';
 import axios from './utils/axios';
 import Error from './Error';
 import ProductItem from './ProductItem';
+import { Link } from 'react-router-dom';
 // container component
 
 // 1. create a component (function or class)
@@ -42,7 +43,8 @@ class ProductList extends React.Component {
     }
 
     render() {
-        return <div>
+        return <div className="m-2">
+            <Link className="bg-orange-500 text-white p-2" to="/products/new">New Product</Link>
             <h1 className="text-2xl m-2 font-semibold">Products</h1>
             {this.state.hasError && <Error />}
             {this.state.products.map(product => <ProductItem product={product}
